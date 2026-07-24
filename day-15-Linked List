@@ -1,0 +1,222 @@
+import java.util.*;
+class Node {
+    int data;
+    Node next;
+    Node(int d)
+    {
+        this.data = d;
+        this.next = null;
+    }
+}
+class Main {
+    Node first;
+    void insert(int d) {
+        Node n = new Node(d);
+        if(first == null)
+        {
+            first=n;
+            n.next = first;
+        }
+        else 
+        {
+            Node temp = first;
+            while(temp.next!=first)
+            {
+                temp = temp.next;
+                n.next = first;
+            }
+        }
+    }
+        void display()
+        {
+            if(first == null)
+            {
+            System.out.print("Linked list is Empty");
+            return;
+            }
+            Node temp = first;
+            do{
+                System.out.print(temp.data+" ");
+                temp=temp.next;
+            }while(temp!=first);
+        }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int d = sc.nextInt();
+        Main m = new Main();
+        while(d != -1)
+        {
+         m.insert(d);
+         d=sc.nextInt();
+        }
+        m.display();
+    }
+
+  import java.util.*;
+class Node {
+    int data;
+    Node next;
+    Node(int d)
+    {
+        this.data = d;
+        this.next = null;
+    }
+}
+class Main 
+{
+    Node first;
+    void insert(int d)
+    {
+        Node n = new Node(d);
+        if(first == null)
+        {
+            first = n;
+            n.next=first;
+        }else{
+            Node temp = first;
+            while(temp.next!=first)
+            {
+                temp = temp.next;
+                n.next = first;
+            }
+        }
+    }
+            void display()
+            {
+                if(first==null)
+                {
+                    System.out.print("Linked list is Empty");
+                    return;
+                }
+                Node temp=first;
+                do{
+                    System.out.print(temp.data+" ");
+                    temp=temp.next;
+                }while(temp != first);
+            }
+    public static void main(String[] args){
+        Scanner obj = new Scanner(System.in);
+        int d = obj.nextInt();
+        Main m = new Main();
+        while(d!=-1)
+        {
+            m.insert(d);
+            d=obj.nextInt();
+        }
+        m.display();
+    }
+}
+
+  import java.util.*;
+class Node {
+    int data;
+    Node next;
+    Node(int d) {
+        this.data = d;
+        this.next = null;
+    }
+}
+class Main {
+    Node first;
+    void insert(int data) {
+    Node n = new Node(data);
+    if( (first == null) {
+        first = n;
+        return;
+    }
+    Node temp = first;
+    while (temp.next ! = null)
+        temp = temp.next;
+        temp.next = n; 
+    } 
+    void insert(int d, int pos){
+        Node n = new Node(d);
+            if(pos == 1) {
+                n.next = first;
+                first = n;
+                return n;
+            }
+            Node temp = first;
+            for(int i - 1; i < pos - 1 && temp ! = null; i++)
+                temp = temp.next;
+            if (temp == null) {
+                System.out.println("Invalid position");
+                return;
+            }
+            n.next = temp.next;
+            temp.next = n;
+        }    
+    }
+}
+void display() {
+    if(first==null)
+    System.out.print("Linked list is Empty");
+    Node temp = first;
+    while (temp != null) {
+        System.out.print(temp.data + " ");
+        temp = temp.next;
+    }
+}
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Node
+{
+    int data;
+    Node next;
+    Node(int d)
+    {
+        this.data = d;
+        this.next = null;
+    }
+}
+class Main
+{
+    Node first;
+    void insert(int d)
+    {
+        Node n = new Node(d);
+        if (first == null)
+        {
+            first = n;
+            return;
+        }
+        else
+        {
+            Node temp = first;
+            while (temp.next != null)
+            {
+                temp = temp.next;
+            }
+            temp.next = n;
+        }
+    }
+    void display()
+    {
+        if (first == null)
+        {
+            System.out.print("Linked List is empty");
+            return;
+        }
+        Node temp = first;
+        while (temp != null)
+        {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        }
+    }
+    public static void main(String args[]) {
+        int data;
+        Scanner obj = new Scanner(System.in);
+        Main m = new Main();
+        int d = obj.nextInt();
+        while (d != -1) {
+            m.insert(d);
+            d = obj.nextInt();
+        }
+        m.display();
+    }
+}
+}
