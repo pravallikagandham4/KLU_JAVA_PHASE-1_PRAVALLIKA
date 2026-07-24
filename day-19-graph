@@ -1,0 +1,29 @@
+import java.util.*;
+class Main {
+    static int[][] graph;
+    static boolean[] visited;
+    static void dfs(int n, int V)
+    {
+        visited[n] = true;
+        System.out.print(n+ " ");
+        for (int i = 0;i < V;i++) {
+            if(graph[n][i] == 1 && !visited[i]){
+                dfs(i, V);
+            }
+        }
+    }
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        int V = obj.nextInt();
+        int E = obj.nextInt();
+        graph = new int[V][V];
+        visited = new boolean[V];
+        for(int i=0;i<E;i++) {
+            int u = obj.nextInt();
+            int v = obj.nextInt();
+            graph[u][v] = 1;
+            graph[v][u] = 1;
+        }
+        dfs(0,V);
+    }
+}
