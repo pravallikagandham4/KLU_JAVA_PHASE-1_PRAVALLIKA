@@ -1,0 +1,138 @@
+import java.util.*;
+class Main
+{
+    int roll;
+    String name;
+    Main()
+    {
+        System.out.println(roll);
+        System.out.println(name);
+    }
+    public static void main(String[] args) {
+        Main obj = new Main();
+    }
+}
+import java.util.*;
+class Main
+{
+    int roll;
+    String name;
+    Main()
+    {
+        System.out.println(roll);
+        System.out.println(name);
+    }
+    public static void main(String[] args) {
+        Main obj = new Main();
+    }
+}
+import java.util.*;
+
+class Father
+{
+    void gen2()
+    {
+        System.out.println("gold");
+    }
+}
+class Daughter extends Father
+{
+    void gen31()
+    {
+        System.out.println("platinum");
+    }
+}
+class Son extends Father
+{
+    void gen32()
+    {
+        System.out.println("cash");
+    }
+}
+class Main {
+    public static void main(String args[])
+    {
+        Daughter d = new Daughter();
+        d.gen31();
+        d.gen2();
+        Son s = new Son();
+        s.gen32();
+        s.gen2();
+    Father f = new Father();
+    f.gen2();
+    
+    
+    }
+}
+import java.util.*;
+class Grandfather
+{
+    void gen1()
+    {
+        System.out.println("Diamond");
+    }
+}
+class Father extends Grandfather
+{
+    void gen2()
+    {
+        System.out.println("gold");
+    }
+}
+class Mother extends Father
+{
+    void gen21()
+    {
+        System.out.println("copper");
+    }
+}
+class Son extends Father
+{
+    void gen3()
+    {
+        System.out.println("cash");
+    }
+}
+class Main {
+    public static void main(String args[])
+    {
+        Son s = new Son();
+        s.gen3();
+        s.gen2();
+        s.gen1();
+    Father f = new Father();
+    f.gen2();
+    f.gen1();
+    Mother m = new Mother();
+    m.gen21();
+    m.gen2();
+    Grandfather g = new Grandfather();
+    g.gen1();
+    }
+}
+import java.util.*;
+class Father
+{
+    void gen2()
+    {
+        System.out.println("gold");
+    }
+}
+class Son extends Father
+{
+    void gen3()
+    {
+        System.out.println("cash");
+    }
+}
+class Main
+{
+    public static void main(String args[])
+    {
+        Son obj = new Son();
+        obj.gen3();
+        obj.gen2();
+    Father f = new Father();
+    f.gen2();
+    }
+}
